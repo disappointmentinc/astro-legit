@@ -5,36 +5,50 @@
 @use 'breakpoint' as *;
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url('/fonts/OpenSans-ExtraBold.woff2') format('woff2'),
-    url('/fonts/OpenSans-ExtraBold.woff') format('woff');
+  font-family: 'TiltNeon';
+  src: local('/fonts/TiltNeon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TiltNeon';
+  src: local('/fonts/Mona-Sans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: local('Mona Sans ExtraBold'), local('MonaSans-ExtraBold'), url('/fonts/MonaSans-ExtraBold.woff2') format('woff2'),
+    url('/fonts/MonaSans-ExtraBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('/fonts/OpenSans-Bold.woff2') format('woff2'),
-    url('/fonts/OpenSans-Bold.woff') format('woff');
+  font-family: 'Mona Sans';
+  src: local('Mona Sans Bold'), local('MonaSans-Bold'), url('/fonts/MonaSans-Bold.woff2') format('woff2'),
+    url('/fonts/MonaSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Italic'), local('OpenSans-Italic'), url('/fonts/OpenSans-Italic.woff2') format('woff2'),
-    url('/fonts/OpenSans-Italic.woff') format('woff');
+  font-family: 'Mona Sans';
+  src: local('Mona Sans Italic'), local('MonaSans-Italic'), url('/fonts/MonaSans-Italic.woff2') format('woff2'),
+    url('/fonts/MonaSans-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url('/fonts/OpenSans-Regular.woff2') format('woff2'),
-    url('/fonts/OpenSans-Regular.woff') format('woff');
+  font-family: 'Mona Sans';
+  src: local('Mona Sans Regular'), local('MonaSans-Regular'), url('/fonts/MonaSans-Regular.woff2') format('woff2'),
+    url('/fonts/MonaSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -144,6 +158,91 @@ body {
     @include breakpoint(medium) {
       font-size: 1.125rem;
       line-height: 1.6875rem;
+    }
+    .logo {
+      height: 100%;
+      width: 100%;
+      max-width: 980px;
+      text-align: center;
+      width: 100%;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      user-select: none;
+    }
+    
+    .logo b {
+      font: 300 4vh "titlneon-1";
+      color: #fee;
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+    }
+    .logo b span {
+      animation: blink linear infinite 2s;
+    }
+    
+    .logo b span:nth-of-type(2) {
+      animation: blink linear infinite 3s;
+    }
+    
+    .sub-logo {
+      position: absolute;
+      top: 4.7%;
+      left: 51%;
+      transform: translate(-50%, -50%) rotate(1.3deg);
+      padding-top: 0;
+      text-align: center;
+    }
+    
+    .sub-logo b {
+      font: 250 3vh "titlneon-1";
+      color: #eef;
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #4444ff, 0 0 0.5em #4444ff, 0 0 0.1em #4444ff, 0 10px 3px #000;
+      padding-top: 5.2em;
+      transform: rotate(-5deg);
+    }
+    
+    .sub-logo b span {
+      animation: blink linear infinite 2s;
+    }
+    
+    .sub-logo b span:nth-of-type(2) {
+      animation: blink linear infinite 3s;
+    }
+    
+    @keyframes blink {
+      78% {
+        color: inherit;
+        text-shadow: inherit;
+      }
+      79% {
+        color: #333;
+      }
+      80% {
+        text-shadow: none;
+      }
+      81% {
+        color: inherit;
+        text-shadow: inherit;
+      }
+      82% {
+        color: #333;
+        text-shadow: none;
+      }
+      83% {
+        color: inherit;
+        text-shadow: inherit;
+      }
+      92% {
+        color: #333;
+        text-shadow: none;
+      }
+      92.5% {
+        color: inherit;
+        text-shadow: inherit;
+      }
     }
   }
 }

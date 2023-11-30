@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'titlneon-1';
+  src: url('https://totallylegitimate.business/TiltNeon.woff2') format('woff2');
+}
+.logo {
+    text-align: left;
+    padding: 0 calc(2rem / 2);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+  }
+  
+  .logo b {
+    font: 300 4vh "titlneon-1";
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+  }
+  .logo b span {
+    animation: blink linear infinite 2s;
+  }
+  
+  .logo b span:nth-of-type(2) {
+    animation: blink linear infinite 3s;
+  }
+  
+  .sub-logo {
+    top: 0;
+    left: 0;
+    right: .9%;
+    transform: translate(-50%, -50%) rotate(1.3deg);
+    text-align: right;
+    padding-left: 3.5em;
+   
+  }
+  
+  .sub-logo b {
+    font: 250 3vh "titlneon-1";
+    color: #eef;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #4444ff, 0 0 0.5em #4444ff, 0 0 0.1em #4444ff, 0 10px 3px #000;
+    padding-top: 5.2em;
+    transform: rotate(-5deg);
+    padding-left: 15.5em;
+  }
+  
+  .sub-logo b span {
+    animation: blink linear infinite 2s;
+  }
+  
+  .sub-logo b span:nth-of-type(2) {
+    animation: blink linear infinite 3s;
+  }
+  
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79% {
+      color: #333;
+    }
+    80% {
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
